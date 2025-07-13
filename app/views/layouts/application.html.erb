@@ -10,6 +10,7 @@
     <%= stylesheet_link_tag 'tailwind', "data-turbo-track": "reload" %>
 
     <%= yield :head %>
+    
 
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
@@ -27,6 +28,7 @@
   <body>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
+        <%= render 'layouts/sidebar' %>
     </main>
   </body>
 </html>

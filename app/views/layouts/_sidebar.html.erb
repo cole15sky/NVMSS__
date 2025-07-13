@@ -1,0 +1,86 @@
+<!-- Sidebar Toggle Button -->
+<button id="toggleSidebarBtn"
+  aria-label="Open sidebar"
+  class="fixed top-20 right-0 z-40 h-14 w-14 bg-yellow-500 text-white rounded-tl-lg rounded-bl-lg flex items-center justify-center shadow-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-transform duration-300"
+  title="Open sidebar"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+       stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+       viewBox="0 0 24 24">
+    <path d="M4 6h16"/>
+    <path d="M4 12h16"/>
+    <path d="M4 18h16"/>
+  </svg>
+</button>
+
+<!-- Sidebar Panel -->
+<aside id="sidebar"
+  class="fixed top-0 right-0 h-full w-72 bg-gray-900 text-white p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto flex flex-col shadow-xl">
+
+  <!-- Close Sidebar Button -->
+  <button id="closeSidebarBtn"
+    aria-label="Close sidebar"
+    class="absolute top-20 right-0 h-14 w-14 bg-yellow-500 text-white rounded-tl-lg rounded-bl-lg flex items-center justify-center shadow-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+    title="Close sidebar"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+         viewBox="0 0 24 24">
+      <path d="M6 18L18 6"/>
+      <path d="M6 6l12 12"/>
+    </svg>
+  </button>
+
+  <!-- Sidebar Navigation -->
+  <nav class="mt-28">
+    <ul class="space-y-4">
+      <li>
+        <a href="/" class="block px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition font-semibold">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/gallery" class="block px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition font-semibold">
+          Gallery
+        </a>
+      </li>
+      <li>
+        <a href="/admissions" class="block px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition font-semibold">
+          Admissions
+        </a>
+      </li>
+      <li>
+        <a href="/notice" class="block px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition font-semibold">
+          Notice
+        </a>
+      </li>
+      <li>
+        <a href="/contact" class="block px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition font-semibold">
+          Contact
+        </a>
+      </li>
+      <li>
+        <a href="/about" class="block px-4 py-2 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition font-semibold">
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- Sidebar Toggle Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("sidebar");
+    const toggleBtn = document.getElementById("toggleSidebarBtn");
+    const closeBtn = document.getElementById("closeSidebarBtn");
+
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.remove("translate-x-full");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.add("translate-x-full");
+    });
+  });
+</script>
